@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KASHBON | Authentic South Asian Dining</title>
+  <meta name="description"
+    content="Experience the authentic flavors of South Asia at KASHBON. Traditional recipes, aromatic spices, and a journey of the senses." />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Header & Navigation -->
+  <header id="header">
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          <img src="/images/tiger-logo.png" alt="KASHBON Logo" class="logo-img" />
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <div class="cart-icon" id="cart-btn">
+            <span>CART</span>
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count">0</span>
+          </div>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>KASHBON</h1>
+        <p>AUTHENTIC FLAVORS & TRADITIONAL ELEGANCE</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="/images/special-dish.png" alt="Restaurant Interior" />
+        </div>
+        <div class="about-text">
+          <h2>Our Story</h2>
+          <p>KASHBON was born from a deep-rooted love for the rich culinary heritage of Bengal. Our recipes have been passed down through generations, capturing the soul of traditional home-cooked meals.</p>
+          <p>From the delicate spice of our Heritage Fried Fish to the refreshing creaminess of our Royal Mango Lassi, every dish is crafted with authentic ingredients and aromatic spices. We invite you to experience a true journey of the senses.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section container">
+      <h2 class="section-title">The Seasonal Menu</h2>
+      <div class="menu-grid" id="menu-container">
+        <!-- Menu items injected via JS -->
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section container">
+      <h2 class="section-title">Visual Journey</h2>
+      <div class="gallery-slider" id="slider">
+        <div class="slide active" style="background-image: url('/images/prawns.png')"></div>
+        <div class="slide" style="background-image: url('/images/lassi.png')"></div>
+        <div class="slide" style="background-image: url('/images/green-cocktail.png')"></div>
+        <div class="slide" style="background-image: url('/images/fish-curry.png')"></div>
+        <div class="slide" style="background-image: url('/images/pani-puri.png')"></div>
+        <div class="slide" style="background-image: url('/images/feast.png')"></div>
+
+        <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section container">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-grid">
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" required placeholder="Your full name" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required placeholder="your@email.com" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" required placeholder="Tell us how we can help..."></textarea>
+          </div>
+          <button type="submit" class="add-to-cart">Send Message</button>
+        </form>
+
+        <div class="contact-map">
+          <!-- Google Maps Embed (Generic Premium Location: Central Park South, NY) -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.9778!3d40.7659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f9a1717c13%3A0x55110196631e721d!2sCentral%20Park%20South%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1687000000000!5m2!1sen!2sus"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Shopping Cart Drawer -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <span class="close-cart" id="close-cart"><i class="fas fa-times"></i></span>
+    </div>
+    <div class="cart-items" id="cart-items-container">
+      <!-- Cart items injected via JS -->
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cart-total-price">$0.00</span>
+      </div>
+      <button class="add-to-cart">Checkout Now</button>
+      <button class="clear-cart" id="clear-cart">Clear Cart</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>KASHBON</h3>
+          <p>Authentic flavors, every bite.</p>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p>Mon - Thu: 4 PM - 10 PM</p>
+          <p>Fri - Sat: 12 PM - 12 AM</p>
+          <p>Sun: 10 AM - 9 PM</p>
+        </div>
+        <div>
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <p>&copy; 2026 KASHBON. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
